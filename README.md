@@ -72,7 +72,9 @@ components it may need, and the delivery loop that ships it.
 
 ## Read it as a website
 
-The docs build with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/):
+**Online:** https://lounissi1.github.io/ai-app-playbook/ (published automatically from `main`).
+
+To preview locally, the docs build with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/):
 
 ```bash
 pip install -r requirements-docs.txt

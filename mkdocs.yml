@@ -1,5 +1,9 @@
 site_name: AI App Playbook
 site_description: Architect, build, deploy and run AI-powered apps, one clear step at a time. Works on any cloud, with real examples on Azure.
+site_url: https://lounissi1.github.io/ai-app-playbook/
+repo_url: https://github.com/lounissi1/ai-app-playbook
+repo_name: lounissi1/ai-app-playbook
+edit_uri: edit/main/docs/
 docs_dir: docs
 theme:
   name: material
