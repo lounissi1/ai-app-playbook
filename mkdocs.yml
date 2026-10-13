@@ -1,10 +1,12 @@
 site_name: AI App Playbook
 site_description: Architect, build, deploy and run AI-powered apps, one clear step at a time. Works on any cloud, with real examples on Azure.
+site_author: Lamjed Lounissi
 site_url: https://lounissi1.github.io/ai-app-playbook/
 repo_url: https://github.com/lounissi1/ai-app-playbook
 repo_name: lounissi1/ai-app-playbook
 edit_uri: edit/main/docs/
 docs_dir: docs
+copyright: "© 2026 Lamjed Lounissi · Docs: CC BY 4.0 · Code: MIT"
 theme:
   name: material
   features:
@@ -21,6 +23,16 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lounissi1
+      name: Lamjed Lounissi on GitHub
+  status:
+    planned: Planned, not written yet
+    draft: Draft, not yet used on a real project
+    reviewed: Reviewed, used on a real project
+    stable: Stable, complete
 markdown_extensions:
   - admonition
   - tables

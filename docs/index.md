@@ -5,14 +5,14 @@
 One documented, repeatable way to take an application from first design to production.
 
 ```
- ARCHITECTURE      frontend · API · queue + workers · cache · database · object storage · AI services
+ ARCHITECTURE    frontend · API · queue + workers · cache ·
+                 database · object storage · AI services
 
- DELIVERY LOOP     Plan → Code → Build → Test → Release → Deploy → Operate → Monitor ─┐
-                    ↑                                                                 │
-                    └────────────── what you learn becomes the next plan ─────────────┘
+ DELIVERY LOOP   Plan → Code → Build → Test → Release →
+                 Deploy → Operate → Monitor → back to Plan
 
- AI                inside the app: model serving · embeddings · RAG · evaluation
-                   building the app: agents + CLAUDE.md + specs + human review
+ AI              in the app: model serving · embeddings · RAG · evaluation
+                 building the app: agents · CLAUDE.md · specs · human review
 ```
 
 ## Start here
@@ -48,3 +48,8 @@ Every page is one of five types, each with a fixed structure:
 | Checklist | A gate you pass before moving on |
 
 Status labels: **planned**, **draft**, **reviewed** (used on a real project), **stable**.
+
+---
+
+*Written and maintained by [Lamjed Lounissi](https://github.com/lounissi1). Suggestions are welcome through
+[issues and pull requests](https://github.com/lounissi1/ai-app-playbook).*
