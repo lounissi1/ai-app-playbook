@@ -1,0 +1,27 @@
+# Built site
+site/
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl.bak
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

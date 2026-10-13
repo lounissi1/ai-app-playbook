@@ -1,0 +1,65 @@
+site_name: AI App Playbook
+site_description: Architect, build, deploy and run AI-powered apps, one clear step at a time. Works on any cloud, with real examples on Azure.
+docs_dir: docs
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+nav:
+  - Home: index.md
+  - Cheat sheet: cheatsheet.md
+  - Architecture:
+      - Design the architecture: guides/architecture.md
+      - Reference app architecture: cards/reference-architecture.md
+      - Background jobs and queues: cards/background-jobs.md
+      - When to split a service?: decisions/when-to-split.md
+  - Delivery loop:
+      - 1 · Plan: guides/01-plan.md
+      - 2 · Code: guides/02-code.md
+      - 3 · Build: guides/03-build.md
+      - 4 · Test: guides/04-test.md
+      - 5 · Release: guides/05-release.md
+      - 6 · Deploy: guides/06-deploy.md
+      - 7 · Operate: guides/07-operate.md
+      - 8 · Monitor: guides/08-monitor.md
+      - Foundation · Security: guides/security.md
+      - Foundation · Infrastructure: guides/infrastructure.md
+      - Foundation · Cost: guides/cost.md
+  - AI:
+      - Working with AI agents: guides/ai-agents.md
+      - Model serving: cards/model-serving.md
+      - Embeddings and vector search: cards/embeddings-vector-search.md
+      - Retrieval-augmented generation: cards/rag.md
+      - AI evaluation: cards/ai-evaluation.md
+  - Cards:
+      - All cards: cards/index.md
+      - Container image: cards/container-image.md
+      - Terraform state: cards/terraform-state.md
+  - Decisions:
+      - Which hosting?: decisions/which-hosting.md
+      - Which infrastructure as code?: decisions/which-iac.md
+      - Which CI/CD?: decisions/which-ci.md
+  - Checklists:
+      - New app: checklists/new-app.md
+      - Production ready: checklists/production-ready.md
+      - Teardown: checklists/teardown.md
