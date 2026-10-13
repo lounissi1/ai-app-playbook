@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use or adapt this playbook, please cite it as below."
+title: "AI App Playbook"
+abstract: "Architect, build, deploy and run AI-powered apps, one clear step at a time. Works on any cloud, with real examples on Azure."
+type: software
+authors:
+  - family-names: Lounissi
+    given-names: Lamjed
+repository-code: "https://github.com/lounissi1/ai-app-playbook"
+url: "https://lounissi1.github.io/ai-app-playbook/"
+license:
+  - CC-BY-4.0
+  - MIT
+date-released: 2026-10-13
+keywords:
+  - ai-engineering
+  - software-architecture
+  - devops
+  - golden-path
+  - rag

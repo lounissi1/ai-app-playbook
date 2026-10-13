@@ -25,16 +25,17 @@ components it may need, and the delivery loop that ships it.
 ## The playbook in one picture
 
 ```
- ARCHITECTURE      frontend · API · queue + workers · cache · database · object storage · AI services
+ ARCHITECTURE    frontend · API · queue + workers · cache ·
+                 database · object storage · AI services
 
- DELIVERY LOOP     Plan → Code → Build → Test → Release → Deploy → Operate → Monitor ─┐
-                    ↑                                                                 │
-                    └────────────── what you learn becomes the next plan ─────────────┘
+ DELIVERY LOOP   Plan → Code → Build → Test → Release →
+                 Deploy → Operate → Monitor → back to Plan
 
- AI                inside the app: model serving · embeddings · RAG · evaluation
-                   building the app: agents + CLAUDE.md + specs + human review
+ AI              in the app: model serving · embeddings · RAG · evaluation
+                 building the app: agents · CLAUDE.md · specs · human review
 
- FOUNDATION        infrastructure as code · identity & secrets · managed data · cost guardrails
+ FOUNDATION      infrastructure as code · identity and secrets ·
+                 managed data · cost guardrails
 ```
 
 ## Four questions that sort every tool
@@ -86,6 +87,14 @@ mkdocs serve        # open http://127.0.0.1:8000
 This repository covers **how an AI-powered app is designed, built, shipped and run**. Deeper
 handbooks (data science, agentic AI, remote sensing, precision agriculture, mathematics) are
 parked in [IDEAS.md](IDEAS.md) and will live in separate repositories that reuse the same schemas.
+
+## Author
+
+Created and maintained by **Lamjed Lounissi** ([@lounissi1](https://github.com/lounissi1)),
+drawing on experience in data science, satellite data and GIS, and scientific software.
+Suggestions and corrections are welcome: open an issue or a pull request.
+
+To cite this playbook, use **Cite this repository** on GitHub (from [CITATION.cff](CITATION.cff)).
 
 ## License
 
