@@ -51,5 +51,5 @@ Before declaring work finished, check it against the guide's `## Done when` list
 
 ## Explaining your work
 
-After each task, write a short summary a human can present in an interview:
+After each task, write a short summary for the pull request description:
 what you built, why this option, what you deliberately left out, and how to roll it back.

@@ -69,8 +69,8 @@ in the back, and you come back with the ticket to collect it.
 |---|---|---|---|
 | Service Bus or Storage Queues; Container Apps jobs (event-driven or scheduled) | SQS; ECS tasks, Lambda, EventBridge Scheduler | Pub/Sub or Cloud Tasks; Cloud Run jobs, Cloud Scheduler | Celery, RQ, Dramatiq (Python), BullMQ (Node), Temporal |
 
-## Say it in an interview
+## In short
 
-> Anything slower than a second leaves the request path: the API enqueues a job and returns
-> 202 with a job id, idempotent workers scale on queue length, and failures land in a
-> dead-letter queue with an alert.
+> Work slower than about a second leaves the request path: the API queues a job and returns a
+> job id at once, idempotent workers scale on queue length, and repeated failures go to a
+> dead-letter queue that someone is alerted about.

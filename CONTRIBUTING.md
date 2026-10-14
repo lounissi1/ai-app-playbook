@@ -94,7 +94,7 @@ Sections, in order:
 5. `## Key terms` · term and definition
 6. `## Pitfalls`
 7. `## Provider mapping` · table: Azure · AWS · Google Cloud · Open source
-8. `## Say it in an interview` · one or two sentences
+8. `## In short` · one or two neutral sentences: the concept and good practice, no "I" or "we"
 
 ## Type 4: Decision tree
 

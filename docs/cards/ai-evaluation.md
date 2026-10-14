@@ -74,8 +74,8 @@ progress is measurable instead of anecdotal.
 |---|---|---|---|
 | Microsoft Foundry evaluations; Application Insights for tracing | Bedrock evaluations; CloudWatch | Vertex AI Gen AI evaluation service; Cloud Trace | Ragas, DeepEval, promptfoo, Inspect; Langfuse or Arize Phoenix for tracing |
 
-## Say it in an interview
+## In short
 
-> Every AI feature has a versioned evaluation set; CI scores retrieval recall and answer
-> faithfulness against the production baseline and blocks regressions, and sampled production
-> failures are added back to the set.
+> A good AI feature has a versioned evaluation set. CI scores retrieval and answer quality
+> against the current baseline and blocks regressions, and failures seen in production are added
+> back to the set.
