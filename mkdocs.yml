@@ -61,6 +61,11 @@ nav:
       - The playbook in one picture: memos/playbook.md
       - App architecture: memos/architecture.md
       - The delivery loop: memos/delivery-loop.md
+      - Where does my code run?: memos/hosting.md
+      - AI inside the app: memos/ai-in-app.md
+      - Building with AI agents: memos/ai-agents.md
+      - Going live: memos/going-live.md
+      - Cost guardrails: memos/cost.md
   - Reference:
       - Cheat sheet: cheatsheet.md
       - Architecture:

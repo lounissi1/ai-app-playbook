@@ -242,8 +242,234 @@ def delivery_loop() -> str:
                "deploy, operate, monitor (running it well). Monitoring feeds the next plan.")
 
 
+
+ROSE, ROSE_BG = "#b42318", "#fde8e6"
+
+
+def lines(x, y, rows, size=14, fill=INK, weight=400, anchor="start", lh=None):
+    lh = lh or size * 1.35
+    return "".join(text(x, y + i * lh, r, size, fill, weight if i == 0 else 400, anchor) for i, r in enumerate(rows))
+
+
+# --------------------------------------------------------------------------- hosting
+def hosting() -> str:
+    W, H = 1000, 640
+    b = ""
+    qs = [
+        (["Is it one classic web app,", "not packaged in containers?"], "PaaS web app", "ops effort: low"),
+        (["Is it mostly small functions", "triggered by events?"], "Serverless functions", "ops effort: lowest"),
+        (["Do you need Kubernetes itself: operators,", "GPU node pools, a platform team?"], "Managed Kubernetes", "ops effort: high"),
+        (["Does it need a full operating system", "that you manage yourself?"], "Virtual machines", "ops effort: very high"),
+    ]
+    y0, step, qh = 32, 118, 76
+    for i, (q, opt, eff) in enumerate(qs):
+        y = y0 + i * step
+        b += box(40, y, 520, qh, BAND, SLATE, rx=12)
+        b += text(60, y + 32, f"{i + 1}", 18, SLATE, 700)
+        b += lines(88, y + 32, q, 16, INK, 600, lh=22)
+        b += arrow(562, y + qh / 2, 646, y + qh / 2)
+        b += text(604, y + qh / 2 - 8, "Yes", 13.5, MUTED, 600, "middle")
+        b += box(648, y + 4, 312, qh - 8, PAPER, SLATE, rx=12)
+        b += text(804, y + 34, opt, 17, INK, 700, "middle")
+        b += text(804, y + 56, eff, 13.5, MUTED, 400, "middle")
+        ny = y + step if i < 3 else 504
+        b += arrow(300, y + qh, 300, ny - 2)
+        b += text(312, y + qh + 26, "No", 13.5, MUTED, 600)
+    b += f'<rect x="40" y="504" width="920" height="108" rx="14" fill="{TEAL_BG}" stroke="{TEAL}" stroke-width="2.5"/>\n'
+    b += text(500, 540, "★  Managed container platform  (the default)", 19, TEAL, 700, "middle")
+    b += text(500, 566, "Runs your containers, scales to zero, low ops effort", 15, INK, 400, "middle")
+    b += text(500, 592, "Azure Container Apps · AWS ECS on Fargate · Google Cloud Run", 14, MUTED, 400, "middle")
+    return svg(W, H, b, "Where does my code run?",
+               "Four yes-or-no questions lead to PaaS web app, serverless functions, managed Kubernetes "
+               "or virtual machines. If every answer is no, use the default: a managed container platform.")
+
+
+# --------------------------------------------------------------------------- AI inside the app
+def ai_in_app() -> str:
+    W, H = 1000, 590
+    b = ""
+    left, gap, w, h = 32, 24, 168, 64
+    xs = [left + i * (w + gap) for i in range(5)]
+
+    def n(col, y, title, sub, fill=VIOLET_BG, stroke=VIOLET):
+        x = xs[col]
+        return box(x, y, w, h, fill, stroke, rx=10) + text(x + w / 2, y + 28, title, 15, INK, 700, "middle") + \
+            text(x + w / 2, y + 48, sub, 13, MUTED, 400, "middle")
+
+    ya, yb, yc = 64, 214, 346
+    b += text(left, ya - 14, "INDEX", 13.5, VIOLET, 700, spacing=1.2) + text(left + 62, ya - 14, "once per document, in a worker", 14, MUTED)
+    b += n(0, ya, "Documents", "PDFs, pages, notes", PAPER, VIOLET)
+    b += n(1, ya, "Chunks", "a few hundred words")
+    b += n(2, ya, "Embedding model", "text → vector")
+    b += n(3, ya, "Vector database", "chunks + vectors", AMBER_BG, AMBER)
+    for c in range(3):
+        b += arrow(xs[c] + w + 1, ya + h / 2, xs[c + 1] - 1, ya + h / 2)
+
+    b += text(left, yb - 14, "ANSWER", 13.5, VIOLET, 700, spacing=1.2) + text(left + 76, yb - 14, "every question, in the API", 14, MUTED)
+    b += n(0, yb, "Question", "from the user", PAPER, VIOLET)
+    b += n(2, yb, "Embedding model", "the same one")
+    b += n(3, yb, "Search", "filtered by user")
+    b += n(4, yb, "Language model", "answer from passages")
+    b += arrow(xs[0] + w + 1, yb + h / 2, xs[2] - 1, yb + h / 2)
+    b += arrow(xs[2] + w + 1, yb + h / 2, xs[3] - 1, yb + h / 2)
+    b += arrow(xs[3] + w + 1, yb + h / 2, xs[4] - 1, yb + h / 2)
+    # same model link and search to vector db
+    b += (f'<line x1="{xs[2] + w / 2}" y1="{ya + h}" x2="{xs[2] + w / 2}" y2="{yb}" stroke="{VIOLET}" '
+          f'stroke-width="1.8" stroke-dasharray="5 4"/>\n')
+    b += text(xs[2] + w / 2 - 8, (ya + h + yb) / 2 + 5, "same model, same version", 13, VIOLET, 600, "end")
+    b += arrow(xs[3] + w / 2, yb - 1, xs[3] + w / 2, ya + h + 1, both=True)
+    b += text(xs[3] + w / 2 + 8, (ya + h + yb) / 2 + 5, "nearest passages", 13, MUTED)
+    # outcomes
+    b += n(4, yc, "Cited answer", "with links to sources", TEAL_BG, TEAL)
+    b += arrow(xs[4] + w / 2, yb + h + 1, xs[4] + w / 2, yc - 1)
+    b += n(3, yc, "“I don't know”", "when nothing matches", ROSE_BG, ROSE)
+    b += arrow(xs[3] + w / 2, yb + h + 1, xs[3] + w / 2, yc - 1)
+    b += text(xs[3] + w / 2 - 8, yb + h + 30, "no good match", 13, MUTED, 400, "end")
+    # bottom cards
+    cw = (936 - 24) / 2
+    for j, (title, rows) in enumerate([
+        ("Evaluation", ["Fixed test questions run in CI:", "right passage found? answer faithful? cost?"]),
+        ("Model serving", ["Managed model API or your own container:", "pinned versions, timeouts, token limits"]),
+    ]):
+        x = left + j * (cw + 24)
+        b += box(x, 450, cw, 108, BAND, SLATE, rx=12)
+        b += text(x + 20, 480, title, 16, SLATE, 700)
+        b += lines(x + 20, 506, rows, 14.5, MUTED, 400, lh=21)
+    return svg(W, H, b, "AI inside the app",
+               "Retrieval-augmented generation. Once per document a worker splits text into chunks, embeds "
+               "them and stores the vectors. For each question the API embeds it with the same model, "
+               "searches with a user filter, and the language model answers from the passages with "
+               "citations, or says it doesn't know. Evaluation and model serving sit underneath.")
+
+
+# --------------------------------------------------------------------------- AI agents
+def ai_agents() -> str:
+    W, H = 1000, 520
+    b = ""
+    lx, x0, right = 32, 168, 968
+    lanes = [("HUMAN", "decides", 70, INDIGO), ("AI AGENT", "types", 200, VIOLET)]
+    for name, verb, y, col in lanes:
+        b += box(lx, y - 14, right - lx, 112, BAND, LINE, rx=12)
+        b += text(lx + 18, y + 34, name, 14, col, 700, spacing=1.2)
+        b += text(lx + 18, y + 56, verb, 14, MUTED)
+    steps = [
+        (0, ["Issue + spec", "goal · limits · done"]),
+        (1, ["Plan", "after reading rules"]),
+        (0, ["✓ Approve", "the plan"]),
+        (1, ["Code + tests", "on a branch"]),
+        (1, ["CI checks", "tests · lint · eval"]),
+        (0, ["✓ Review", "and merge"]),
+    ]
+    gap = 16
+    w = (right - 16 - x0 - gap * 5) / 6
+    pts = []
+    for i, (lane, rows) in enumerate(steps):
+        x = x0 + i * (w + gap)
+        y = lanes[lane][2]
+        ci = i == 4
+        fill, stroke = (TEAL_BG, TEAL) if ci else (INDIGO_BG, INDIGO) if lane == 0 else (VIOLET_BG, VIOLET)
+        b += box(x, y, w, 84, fill, stroke, rx=10)
+        b += text(x + w / 2, y + 36, rows[0], 15, INK, 700, "middle")
+        b += text(x + w / 2, y + 58, rows[1], 12.5, MUTED, 400, "middle")
+        pts.append((x, y, w))
+    for (x1, y1, w1), (x2, y2, _) in zip(pts, pts[1:]):
+        if y1 == y2:
+            b += arrow(x1 + w1 + 1, y1 + 42, x2 - 1, y2 + 42)
+        else:
+            b += arrow(x1 + w1 + 1, y1 + (64 if y2 > y1 else 20), x2 - 1, y2 + (20 if y2 > y1 else 64))
+    b += box(lx, 330, right - lx, 64, VIOLET_BG, VIOLET, rx=12)
+    b += text(lx + 18, 357, "Every task starts from an instruction file", 15, VIOLET, 700)
+    b += text(lx + 18, 380, "CLAUDE.md or AGENTS.md: project rules, how to run and test, hard limits", 14, INK)
+    b += box(lx, 410, right - lx, 82, ROSE_BG, ROSE, rx=12)
+    b += text(lx + 18, 438, "Always a human", 15, ROSE, 700)
+    b += text(lx + 18, 462, "production deploys · infrastructure apply and destroy · deleting data · changing access ·", 14, INK)
+    b += text(lx + 18, 481, "anything that bills", 14, INK)
+    return svg(W, H, b, "Building with AI agents",
+               "Two lanes. The human writes the issue and spec, approves the agent's plan, and reviews and "
+               "merges. The agent proposes the plan, codes with tests on a branch, and CI checks it. An "
+               "instruction file sets the rules; irreversible actions always stay with a human.")
+
+
+# --------------------------------------------------------------------------- going live
+def going_live() -> str:
+    W, H = 1000, 560
+    b = ""
+    groups = [
+        ("DELIVERY", INDIGO, INDIGO_BG, ["Reviewed PRs + CI", "One image per version", "Migrations first", "Rollback in minutes"],
+         ["on every change", "built by CI", "run before each deploy", "tested at least once"]),
+        ("RUNTIME AND DATA", TEAL, TEAL_BG, ["HTTPS everywhere", "No data on disk", "Managed database", "A restore tested"],
+         ["with health checks", "files in object storage", "automatic backups", "at least once"]),
+        ("SECURITY AND OPERATIONS", SLATE, SLATE_BG, ["No secrets in code", "Infrastructure in code", "An alert to a person", "Budget alert + tags"],
+         ["identities, not passwords", "rebuilt from scratch once", "logs, metrics, traces", "on every resource"]),
+    ]
+    left, gap = 32, 16
+    w = (936 - gap * 3) / 4
+    y = 40
+    for name, col, bg, titles, subs in groups:
+        b += text(left, y, name, 13.5, col, 700, spacing=1.2)
+        for i, (t1, t2) in enumerate(zip(titles, subs)):
+            x = left + i * (w + gap)
+            b += box(x, y + 12, w, 82, bg, col, rx=12)
+            b += f'<circle cx="{x + 26}" cy="{y + 53}" r="12" fill="{col}"/>\n'
+            b += (f'<path d="M{x + 20},{y + 53} l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" '
+                  f'stroke-linecap="round" stroke-linejoin="round"/>\n')
+            b += text(x + 48, y + 49, t1, 14.5, INK, 700)
+            b += text(x + 48, y + 70, t2, 13.5, MUTED)
+        y += 126
+    b += box(left, y - 8, 936, 96, VIOLET_BG, VIOLET, rx=12)
+    b += text(left + 20, y + 22, "IF THE APP USES AI", 13.5, VIOLET, 700, spacing=1.2)
+    b += text(left + 20, y + 48, "Pinned model versions · timeouts and token limits · same embedding model everywhere ·", 14.5, INK)
+    b += text(left + 20, y + 70, "retrieval filtered by user · evaluation set in CI that blocks regressions", 14.5, INK)
+    return svg(W, H, b, "Going live: the minimum",
+               "Twelve must-haves in three groups: delivery, runtime and data, security and operations, "
+               "plus five extra checks when the app uses AI.")
+
+
+# --------------------------------------------------------------------------- cost
+def cost() -> str:
+    W, H = 1000, 560
+    b = ""
+    cols = [
+        ("Bills while it runs", ORANGE, ORANGE_BG, ["Servers and databases left on", "A minimum of 1 replica", "Container registries", "Log storage"]),
+        ("Bills when it is used", TEAL, TEAL_BG, ["Apps that scale to zero", "Model calls (tokens)", "Storage you actually fill", ""]),
+        ("Easy to miss", ROSE, ROSE_BG, ["Free credit that ends quietly", "Paid add-ons in setup wizards", "Untagged leftovers", ""]),
+    ]
+    left, gap = 32, 18
+    w = (936 - gap * 2) / 3
+    for i, (title, col, bg, items) in enumerate(cols):
+        x = left + i * (w + gap)
+        b += box(x, 32, w, 196, bg, col, rx=14)
+        b += text(x + 20, 64, title, 17, col, 700)
+        for k, it in enumerate([i for i in items if i]):
+            b += f'<circle cx="{x + 26}" cy="{96 + k * 32}" r="4" fill="{col}"/>\n'
+            b += text(x + 40, 101 + k * 32, it, 15, INK)
+    b += text(left, 276, "SIX BRAKES, IN ORDER", 13.5, SLATE, 700, spacing=1.2)
+    brakes = [("Budget first", "alerts at 50·80·100%"), ("Estimate", "before creating"), ("Scale to zero", "where idle is fine"),
+              ("Tag everything", "review monthly"), ("Cap logs", "daily limit"), ("Tear down", "when finished")]
+    gap = 14
+    w = (936 - gap * 5) / 6
+    for i, (t1, t2) in enumerate(brakes):
+        x = left + i * (w + gap)
+        b += box(x, 292, w, 104, SLATE_BG, SLATE, rx=12)
+        b += f'<circle cx="{x + w / 2}" cy="{322}" r="15" fill="{SLATE}"/>\n'
+        b += text(x + w / 2, 327, str(i + 1), 14, "#ffffff", 700, "middle")
+        b += text(x + w / 2, 362, t1, 15, INK, 700, "middle")
+        b += text(x + w / 2, 382, t2, 13, MUTED, 400, "middle")
+        if i < 5:
+            b += arrow(x + w + 1, 344, x + w + gap - 1, 344)
+    b += box(left, 426, 936, 104, AMBER_BG, AMBER, rx=14)
+    b += text(500, 466, "A budget alerts. It does not stop spending.", 20, AMBER, 700, "middle")
+    b += text(500, 496, "Stopping takes an action you set up yourself, or a teardown.", 15, INK, 400, "middle")
+    return svg(W, H, b, "Cost guardrails",
+               "What bills while it runs, what bills when used, and what is easy to miss; then six brakes in "
+               "order: budget first, estimate, scale to zero, tag everything, cap logs, tear down. A budget "
+               "alerts but does not stop spending.")
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, fn in [("playbook", overview), ("architecture", architecture), ("delivery-loop", delivery_loop)]:
+    for name, fn in [("playbook", overview), ("architecture", architecture), ("delivery-loop", delivery_loop),
+                     ("hosting", hosting), ("ai-in-app", ai_in_app), ("ai-agents", ai_agents),
+                     ("going-live", going_live), ("cost", cost)]:
         (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8")
         print("wrote", OUT / f"{name}.svg")

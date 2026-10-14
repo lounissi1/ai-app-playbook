@@ -32,6 +32,44 @@ hide: [navigation, toc]
 
     [:octicons-arrow-right-24: Open](delivery-loop.md)
 
-</div>
+-   :material-server-network:{ .lg } **Where does my code run?**
 
-<p class="coming-next">Coming next: where does my code run? · AI inside the app · building with AI agents · going live · cost guardrails.</p>
+    ---
+
+    Four questions pick the hosting. Most apps end at the default.
+
+    [:octicons-arrow-right-24: Open](hosting.md)
+
+-   :material-brain:{ .lg } **AI inside the app**
+
+    ---
+
+    Answer questions from your own documents, with sources.
+
+    [:octicons-arrow-right-24: Open](ai-in-app.md)
+
+-   :material-robot-outline:{ .lg } **Building with AI agents**
+
+    ---
+
+    The agent types; you approve the plan and the merge.
+
+    [:octicons-arrow-right-24: Open](ai-agents.md)
+
+-   :material-rocket-launch-outline:{ .lg } **Going live**
+
+    ---
+
+    The minimum checks before real users depend on the app.
+
+    [:octicons-arrow-right-24: Open](going-live.md)
+
+-   :material-cash-multiple:{ .lg } **Cost guardrails**
+
+    ---
+
+    What bills, what's easy to miss, and six brakes.
+
+    [:octicons-arrow-right-24: Open](cost.md)
+
+</div>
