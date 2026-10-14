@@ -466,6 +466,56 @@ def cost() -> str:
                "alerts but does not stop spending.")
 
 
+
+# --------------------------------------------------------------------------- banner and social preview
+def banner(W: int = 1200, H: int = 340) -> str:
+    """Title banner for the README; at 1280x640 it doubles as the GitHub social preview.
+
+    Content is drawn on a 1200x340 canvas and scaled to fit, centred, on a full-size background.
+    """
+    s = min(W / 1200, H / 340)
+    ox, oy = (W - 1200 * s) / 2, (H - 340 * s) / 2
+    bg = (
+        '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">'
+        '<stop offset="0" stop-color="#2f2a8f"/><stop offset="0.55" stop-color="#4b3cc4"/>'
+        '<stop offset="1" stop-color="#7b3fd1"/></linearGradient></defs>\n'
+        f'<rect x="0" y="0" width="{W}" height="{H}" rx="22" fill="url(#g)"/>\n'
+        f'<circle cx="{W - 120}" cy="-40" r="{H * 0.55:.0f}" fill="#ffffff" opacity="0.05"/>\n'
+        f'<circle cx="80" cy="{H + 60}" r="{H * 0.6:.0f}" fill="#ffffff" opacity="0.05"/>\n'
+    )
+    b = ""
+    x = 60
+    b += text(x, 78, "OPEN PLAYBOOK · FREE TO REUSE", 15, "#cfc9ff", 700, spacing=2)
+    b += text(x, 150, "AI App Playbook", 66, "#ffffff", 800)
+    b += text(x, 196, "Architect, build, deploy and run AI-powered apps,", 23, "#ece9ff")
+    b += text(x, 228, "one clear step at a time.", 23, "#ece9ff")
+    cx = x
+    for c in ["Architecture", "Delivery loop", "AI in the app", "AI agents", "Any cloud · Azure examples"]:
+        w = len(c) * 8.6 + 34
+        b += (f'<rect x="{cx:.1f}" y="262" width="{w:.1f}" height="36" rx="18" fill="#ffffff" '
+              f'fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.35"/>\n')
+        b += text(cx + w / 2, 286, c, 15, "#ffffff", 600, "middle")
+        cx += w + 10
+    rcx, rcy, rr = 1010, 170, 112
+    b += (f'<circle cx="{rcx}" cy="{rcy}" r="{rr}" fill="none" stroke="#ffffff" stroke-opacity="0.45" '
+          'stroke-width="2.5" stroke-dasharray="6 6"/>\n')
+    for i in range(8):
+        a = math.radians(-90 + i * 45)
+        nx, ny = rcx + rr * math.cos(a), rcy + rr * math.sin(a)
+        fill = "#c9cdfd" if i < 4 else "#ffd2b8"
+        b += f'<circle cx="{nx:.1f}" cy="{ny:.1f}" r="20" fill="{fill}" stroke="#ffffff" stroke-width="2"/>\n'
+        b += text(nx, ny + 6, str(i + 1), 16, "#2f2a8f", 800, "middle")
+    b += text(rcx, rcy - 4, "plan → monitor", 15, "#ffffff", 700, "middle")
+    b += text(rcx, rcy + 18, "every change,", 13.5, "#e3e0ff", 400, "middle")
+    b += text(rcx, rcy + 36, "the same way", 13.5, "#e3e0ff", 400, "middle")
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
+        f'role="img" aria-labelledby="t" {FONT}>\n<title id="t">AI App Playbook: architect, build, deploy '
+        f'and run AI-powered apps, one clear step at a time</title>\n{bg}'
+        f'<g transform="translate({ox:.1f},{oy:.1f}) scale({s:.4f})">\n{b}</g>\n</svg>\n'
+    )
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     for name, fn in [("playbook", overview), ("architecture", architecture), ("delivery-loop", delivery_loop),
@@ -473,3 +523,6 @@ if __name__ == "__main__":
                      ("going-live", going_live), ("cost", cost)]:
         (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8")
         print("wrote", OUT / f"{name}.svg")
+    (OUT.parent / "banner.svg").write_text(banner(), encoding="utf-8")
+    (OUT.parent / "social-preview.svg").write_text(banner(1280, 640), encoding="utf-8")
+    print("wrote banner.svg and social-preview.svg (convert the latter to PNG for GitHub)")
