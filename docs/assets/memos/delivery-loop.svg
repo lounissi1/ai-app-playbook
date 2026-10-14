@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">The delivery loop</title>
+<desc id="d">Eight stages in a circle: plan, code, build, test (building it right), then release, deploy, operate, monitor (running it well). Monitoring feeds the next plan.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="639" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<path d="M546.0,130.2 A205,205 0 0 1 608.7,156.2" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M673.8,221.3 A205,205 0 0 1 699.8,284.0" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M699.8,376.0 A205,205 0 0 1 673.8,438.7" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M608.7,503.8 A205,205 0 0 1 546.0,529.8" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M454.0,529.8 A205,205 0 0 1 391.3,503.8" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M326.2,438.7 A205,205 0 0 1 300.2,376.0" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M300.2,284.0 A205,205 0 0 1 326.2,221.3" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M391.3,156.2 A205,205 0 0 1 454.0,130.2" fill="none" stroke="#5b6472" stroke-width="1.8" marker-end="url(#arrow)"/>
+<circle cx="500.0" cy="125.0" r="40" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="2"/>
+<text x="500.0" y="119.0" font-size="13" font-weight="700" fill="#3f3cbb" text-anchor="middle">1</text>
+<text x="500.0" y="139.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Plan</text>
+<text x="500.0" y="41.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="middle">Small issues with</text>
+<text x="500.0" y="60.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="middle">a clear finish line</text>
+<circle cx="645.0" cy="185.0" r="40" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="2"/>
+<text x="645.0" y="179.0" font-size="13" font-weight="700" fill="#3f3cbb" text-anchor="middle">2</text>
+<text x="645.0" y="199.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Code</text>
+<text x="688.8" y="141.2" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">Branch, pull request,</text>
+<text x="688.8" y="160.2" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">human review</text>
+<circle cx="705.0" cy="330.0" r="40" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="2"/>
+<text x="705.0" y="324.0" font-size="13" font-weight="700" fill="#3f3cbb" text-anchor="middle">3</text>
+<text x="705.0" y="344.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Build</text>
+<text x="767.0" y="330.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">CI makes one image</text>
+<text x="767.0" y="349.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">per commit</text>
+<circle cx="645.0" cy="475.0" r="40" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="2"/>
+<text x="645.0" y="469.0" font-size="13" font-weight="700" fill="#3f3cbb" text-anchor="middle">4</text>
+<text x="645.0" y="489.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Test</text>
+<text x="688.8" y="518.8" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">Tests, lint and scans</text>
+<text x="688.8" y="537.8" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">on every change</text>
+<circle cx="500.0" cy="535.0" r="40" fill="#fde4d3" stroke="#b4480e" stroke-width="2"/>
+<text x="500.0" y="529.0" font-size="13" font-weight="700" fill="#b4480e" text-anchor="middle">5</text>
+<text x="500.0" y="549.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Release</text>
+<text x="500.0" y="605.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="middle">The tested image</text>
+<text x="500.0" y="624.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="middle">becomes a version</text>
+<circle cx="355.0" cy="475.0" r="40" fill="#fde4d3" stroke="#b4480e" stroke-width="2"/>
+<text x="355.0" y="469.0" font-size="13" font-weight="700" fill="#b4480e" text-anchor="middle">6</text>
+<text x="355.0" y="489.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Deploy</text>
+<text x="311.2" y="518.8" font-size="15" font-weight="400" fill="#5b6472" text-anchor="end">Migrate, switch traffic,</text>
+<text x="311.2" y="537.8" font-size="15" font-weight="400" fill="#5b6472" text-anchor="end">roll back if needed</text>
+<circle cx="295.0" cy="330.0" r="40" fill="#fde4d3" stroke="#b4480e" stroke-width="2"/>
+<text x="295.0" y="324.0" font-size="13" font-weight="700" fill="#b4480e" text-anchor="middle">7</text>
+<text x="295.0" y="344.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Operate</text>
+<text x="233.0" y="330.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="end">Scale, schedule, back up,</text>
+<text x="233.0" y="349.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="end">control cost</text>
+<circle cx="355.0" cy="185.0" r="40" fill="#fde4d3" stroke="#b4480e" stroke-width="2"/>
+<text x="355.0" y="179.0" font-size="13" font-weight="700" fill="#b4480e" text-anchor="middle">8</text>
+<text x="355.0" y="199.0" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="middle">Monitor</text>
+<text x="311.2" y="141.2" font-size="15" font-weight="400" fill="#5b6472" text-anchor="end">Logs, metrics, alerts</text>
+<text x="311.2" y="160.2" font-size="15" font-weight="400" fill="#5b6472" text-anchor="end">feed the next plan</text>
+<text x="500.0" y="312.0" font-size="20" font-weight="700" fill="#1f2937" text-anchor="middle">Every change,</text>
+<text x="500.0" y="338.0" font-size="20" font-weight="700" fill="#1f2937" text-anchor="middle">the same way</text>
+<text x="500.0" y="366.0" font-size="14" font-weight="400" fill="#5b6472" text-anchor="middle">small · reviewed · automated · reversible</text>
+<rect x="36.0" y="28.0" width="15.0" height="15.0" rx="3" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="57.0" y="40.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">1–4  DEV: build it right</text>
+<rect x="36.0" y="52.0" width="15.0" height="15.0" rx="3" fill="#fde4d3" stroke="#b4480e" stroke-width="1.5"/>
+<text x="57.0" y="64.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">5–8  OPS: run it well</text>
+</svg>

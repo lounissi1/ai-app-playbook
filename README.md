@@ -51,6 +51,7 @@ components it may need, and the delivery loop that ships it.
 
 | You want to… | Go to |
 |---|---|
+| Get the picture in a minute | [docs/memos/](docs/memos/) (visual memos) |
 | See everything on one page | [docs/cheatsheet.md](docs/cheatsheet.md) |
 | Design an app's architecture | [docs/guides/architecture.md](docs/guides/architecture.md) |
 | Add AI to an app | [model serving](docs/cards/model-serving.md), [RAG](docs/cards/rag.md), [evaluation](docs/cards/ai-evaluation.md) |
