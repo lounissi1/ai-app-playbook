@@ -111,9 +111,8 @@ desserts is the AI service. Waiters never cook, and nothing important is kept in
 | Object storage | Blob Storage | S3 | Cloud Storage | MinIO |
 | AI services | Microsoft Foundry, Container Apps | Bedrock, SageMaker AI | Vertex AI | vLLM, Ollama |
 
-## Say it in an interview
+## In short
 
-> I start from a standard layered architecture: stateless frontend, API and workers on a managed
-> container platform, a queue for anything slow, and state only in a managed database and object
-> storage. AI capabilities sit behind their own service boundary, so heavy models scale
-> independently of the API.
+> Most apps fit a standard layered shape: a stateless frontend, API and workers, a queue for
+> anything slow, and state only in a managed database and object storage. AI capabilities sit
+> behind their own service boundary so heavy models scale independently of the API.

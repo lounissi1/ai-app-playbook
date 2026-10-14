@@ -80,8 +80,8 @@ own generator (self-hosted: full control, but you buy fuel, maintain it and pay 
 |---|---|---|---|
 | Microsoft Foundry (model catalog and deployments); Container Apps (including serverless GPUs) for self-hosting | Amazon Bedrock; SageMaker AI endpoints; ECS for self-hosting | Vertex AI (Model Garden, endpoints); Cloud Run with GPUs | vLLM, SGLang, Ollama, llama.cpp; Hugging Face Text Embeddings Inference; LiteLLM as a gateway |
 
-## Say it in an interview
+## In short
 
-> Large language models come from a managed API behind one internal client with pinned versions,
-> timeouts and token budgets; small specialised models such as the embedder run as our own
-> container that scales to zero, so we pay for GPUs or memory only when they work.
+> Large language models are usually reached through a managed API behind one internal client, with
+> pinned versions, timeouts and token limits. Small specialised models can run as their own
+> container that scales to zero, so compute is paid for only while it works.

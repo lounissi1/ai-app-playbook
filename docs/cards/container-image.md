@@ -69,8 +69,7 @@ heated and served. You can serve many plates from the same frozen batch, and the
 |---|---|---|---|
 | Azure Container Registry | Amazon Elastic Container Registry (ECR) | Artifact Registry | Docker, Podman, Buildah; registries: Harbor, Docker Hub |
 
-## Say it in an interview
+## In short
 
-> CI builds one immutable image per commit with a multi-stage Dockerfile, tags it with the commit
-> SHA and pushes it to a private registry. Every environment runs that exact image; only
-> environment variables and secrets differ.
+> CI builds one immutable image per commit and pushes it to a private registry. Every environment
+> runs that exact image; only environment variables and secrets differ.

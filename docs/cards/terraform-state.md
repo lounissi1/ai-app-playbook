@@ -71,8 +71,8 @@ the list, the company cannot tell which buildings are its own, and would build d
 |---|---|---|---|
 | `azurerm` backend: Azure Storage blob container, locking by blob lease | `s3` backend: Amazon S3, with S3 lockfile or DynamoDB locking | `gcs` backend: Google Cloud Storage, built-in locking | OpenTofu (same model, adds client-side state encryption); HCP Terraform for managed state |
 
-## Say it in an interview
+## In short
 
-> State is Terraform's record of what it manages. I keep it remote in private, identity-protected
-> storage with locking, outside the environment it describes, so CI and people share one source of
+> State is Terraform's record of what it manages. It belongs in private, identity-protected remote
+> storage with locking, outside the environment it describes, so people and CI share one source of
 > truth and a destroy can never delete its own state.

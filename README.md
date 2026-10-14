@@ -84,7 +84,7 @@ One topic, one picture, five things to remember. Click any picture to open the m
 | 🎓 **Learning** cloud, DevOps or AI engineering | The [memos](https://lounissi1.github.io/ai-app-playbook/memos/), then the [cheat sheet](docs/cheatsheet.md) |
 | 🛠️ **Building** an app and want a safe default for every choice | **Use this template**, then the [new app checklist](docs/checklists/new-app.md) |
 | 🤖 **Working with AI coding agents** | [CLAUDE.md](CLAUDE.md) and [Working with AI agents](docs/guides/ai-agents.md) |
-| 🎤 **Preparing for an interview** | Every card ends with *Say it in an interview*: start with the [cards](docs/cards/index.md) |
+| 📚 **Looking up one concept** | The [cards](docs/cards/index.md): one idea per page, each ending with a two-line summary |
 
 ## Four questions that sort every tool
 

@@ -74,8 +74,8 @@ An open-book exam. The student (the model) is not expected to remember everythin
 |---|---|---|---|
 | Azure AI Search with Microsoft Foundry models (or PostgreSQL pgvector) | Bedrock Knowledge Bases (or pgvector, OpenSearch) | Vertex AI RAG Engine, Vertex AI Search (or pgvector) | LlamaIndex, LangChain, Haystack; pgvector, Qdrant |
 
-## Say it in an interview
+## In short
 
-> Our assistant uses RAG: permission-filtered hybrid retrieval over pgvector, a short grounded
-> prompt that must cite sources or say it doesn't know, and an evaluation set that scores
-> retrieval and answers separately on every change.
+> A RAG assistant retrieves passages the user is allowed to see, asks the model to answer only from
+> them with citations or say it doesn't know, and is checked by an evaluation set that scores
+> retrieval and answers separately.

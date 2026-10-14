@@ -36,6 +36,6 @@ stages: []
 |---|---|---|---|
 |  |  |  |  |
 
-## Say it in an interview
+## In short
 
 > 

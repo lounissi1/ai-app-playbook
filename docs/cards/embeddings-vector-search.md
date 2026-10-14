@@ -78,8 +78,8 @@ nearest books.
 |---|---|---|---|
 | Database for PostgreSQL with pgvector; Azure AI Search; Cosmos DB vector search; embedding models in Microsoft Foundry | RDS or Aurora PostgreSQL with pgvector; OpenSearch Service; S3 Vectors; embedding models in Bedrock | Cloud SQL or AlloyDB with pgvector; Vertex AI Vector Search; Vertex AI embeddings | pgvector, Qdrant, Weaviate, Milvus, FAISS; models such as BGE-M3 via Sentence Transformers |
 
-## Say it in an interview
+## In short
 
-> We store chunk embeddings in PostgreSQL with pgvector and an HNSW index, filter by owner in the
-> same query, and pin one embedding model version for both indexing and querying, with a CI test
-> that fails if two services produce different vectors.
+> Chunks and their embeddings live together, often in PostgreSQL with a vector extension and an
+> approximate index. Searches filter by owner in the same query, and indexing and querying use one
+> pinned model version, checked automatically.
