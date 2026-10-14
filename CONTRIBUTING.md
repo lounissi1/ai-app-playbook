@@ -1,6 +1,6 @@
 # Contributing: the data model of this handbook
 
-Every page in `docs/` is exactly **one** of five document types. Each type has a fixed
+Every page in `docs/` is exactly **one** of six document types. Each type has a fixed
 front-matter schema and a fixed list of sections, in a fixed order. Never mix types on one page.
 
 ## Rules that apply to every page
@@ -23,8 +23,8 @@ front-matter schema and a fixed list of sections, in a fixed order. Never mix ty
 
 ```yaml
 ---
-id: <type-prefix>-<slug>          # unique; prefixes: cheat, guide, card, decision, checklist
-type: cheatsheet | guide | card | decision | checklist
+id: <type-prefix>-<slug>          # unique; prefixes: cheat, guide, card, decision, checklist, memo
+type: cheatsheet | guide | card | decision | checklist | memo
 title: <Title Case name>
 status: planned | draft | reviewed | stable
 updated: YYYY-MM-DD
@@ -130,6 +130,22 @@ Sections, in order:
 1. `## When to use`
 2. `## Checklist` · `- [ ]` items, grouped with `###` headings; each item links to its guide or card
 3. `## If an item fails`
+
+## Type 6: Memo
+
+The visual summary of one topic, for people rather than agents. One screen, readable in about a
+minute. Memos summarise; they never contain anything the reference pages don't.
+
+Extra front matter (optional): `hide: [navigation, toc]` gives the picture the full page width.
+
+Sections, in order:
+
+1. `## In one picture` · one infographic (SVG in `docs/assets/memos/`) or one Mermaid diagram
+2. `## Remember` · at most five bullets, one line each
+3. `## Go deeper` · links to the reference pages (guides, cards, decisions, checklists)
+
+Rules: at most about 150 words outside the picture; every picture has alt text that states its
+point; pictures carry their own light background so they read in light and dark mode.
 
 ## Starter README schema (`starters/<cloud>/<area>/README.md`)
 

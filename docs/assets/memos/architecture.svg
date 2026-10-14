@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Reference app architecture</title>
+<desc id="d">Users reach a web frontend, which calls the API. The API reads a cache, calls AI services, and sends slow work to a queue for workers. Only the database and object storage hold data; everything else is stateless.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="599" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<rect x="420.0" y="24.0" width="160.0" height="36.0" rx="18" fill="#f6f8fb" stroke="#d9dee5" stroke-width="1.5"/>
+<text x="500.0" y="47.0" font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">Users</text>
+<line x1="500.0" y1="60.0" x2="500.0" y2="92.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="380.0" y="94.0" width="240.0" height="66.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="500.0" y="124.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Web frontend</text>
+<text x="500.0" y="145.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">pages and screens</text>
+<line x1="500.0" y1="160.0" x2="500.0" y2="208.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="510.0" y="189.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="start">HTTPS + JSON</text>
+<rect x="380.0" y="210.0" width="240.0" height="74.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="500.0" y="244.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">API</text>
+<text x="500.0" y="265.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">fast answers, under a second</text>
+<rect x="70.0" y="214.0" width="220.0" height="66.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="180.0" y="244.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Cache</text>
+<text x="180.0" y="265.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">hot results in memory</text>
+<line x1="292.0" y1="247.0" x2="378.0" y2="247.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<rect x="710.0" y="214.0" width="220.0" height="66.0" rx="12" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="820.0" y="244.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">AI services</text>
+<text x="820.0" y="265.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">LLM · embeddings</text>
+<line x1="622.0" y1="247.0" x2="708.0" y2="247.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="440.0" y="322.0" width="160.0" height="56.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="520.0" y="347.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Queue</text>
+<text x="520.0" y="368.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">slow work waits</text>
+<line x1="520.0" y1="284.0" x2="520.0" y2="320.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="710.0" y="316.0" width="220.0" height="66.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="820.0" y="346.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Workers</text>
+<text x="820.0" y="367.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">slow and heavy jobs</text>
+<line x1="602.0" y1="350.0" x2="708.0" y2="350.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="820.0" y1="316.0" x2="820.0" y2="282.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="60.0" y="430.0" width="880.0" height="136.0" rx="14" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="80.0" y="454.0" font-size="12.5" font-weight="700" fill="#a15c07" text-anchor="start" letter-spacing="1.2">STATE LIVES ONLY HERE</text>
+<rect x="200.0" y="470.0" width="260.0" height="74.0" rx="12" fill="#ffffff" stroke="#a15c07" stroke-width="1.5"/>
+<text x="330.0" y="504.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Database</text>
+<text x="330.0" y="525.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">records · vectors · maps</text>
+<rect x="540.0" y="470.0" width="260.0" height="74.0" rx="12" fill="#ffffff" stroke="#a15c07" stroke-width="1.5"/>
+<text x="670.0" y="504.0" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Object storage</text>
+<text x="670.0" y="525.0" font-size="14.5" font-weight="400" fill="#5b6472" text-anchor="middle">files · images · models</text>
+<line x1="410.0" y1="284.0" x2="410.0" y2="468.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="400.0" y="410.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="end">read / write</text>
+<line x1="780.0" y1="382.0" x2="780.0" y2="468.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="740.0" y1="382.0" x2="440.0" y2="468.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="70.0" y="108.0" width="15.0" height="15.0" rx="3" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="91.0" y="120.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">stateless: safe to restart or copy</text>
+<rect x="70.0" y="130.0" width="15.0" height="15.0" rx="3" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="91.0" y="142.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">holds data: back it up</text>
+<rect x="70.0" y="152.0" width="15.0" height="15.0" rx="3" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="91.0" y="164.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">AI: managed API or own service</text>
+</svg>

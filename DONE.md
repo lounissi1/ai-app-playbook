@@ -12,6 +12,7 @@ required for v1; new ideas go to [IDEAS.md](IDEAS.md).
 ## Content
 
 - [ ] Cheat sheet at `stable`
+- [ ] Eight visual memos (playbook, architecture, delivery loop, hosting, AI in the app, AI agents, going live, cost)
 - [ ] Eight stage guides (01-plan to 08-monitor) at `reviewed` or better
 - [ ] Foundation guides (architecture, security, infrastructure, cost, AI agents) at `reviewed` or better
 - [ ] At least 15 cards at `reviewed` or better (see the list in `docs/cards/index.md`)

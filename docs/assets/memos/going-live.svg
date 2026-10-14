@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Going live: the minimum</title>
+<desc id="d">Twelve must-haves in three groups: delivery, runtime and data, security and operations, plus five extra checks when the app uses AI.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="559" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<text x="32.0" y="40.0" font-size="13.5" font-weight="700" fill="#3f3cbb" text-anchor="start" letter-spacing="1.2">DELIVERY</text>
+<rect x="32.0" y="52.0" width="222.0" height="82.0" rx="12" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<circle cx="58.0" cy="93" r="12" fill="#3f3cbb"/>
+<path d="M52.0,93 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80.0" y="89.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Reviewed PRs + CI</text>
+<text x="80.0" y="110.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">on every change</text>
+<rect x="270.0" y="52.0" width="222.0" height="82.0" rx="12" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<circle cx="296.0" cy="93" r="12" fill="#3f3cbb"/>
+<path d="M290.0,93 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="318.0" y="89.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">One image per version</text>
+<text x="318.0" y="110.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">built by CI</text>
+<rect x="508.0" y="52.0" width="222.0" height="82.0" rx="12" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<circle cx="534.0" cy="93" r="12" fill="#3f3cbb"/>
+<path d="M528.0,93 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="556.0" y="89.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Migrations first</text>
+<text x="556.0" y="110.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">run before each deploy</text>
+<rect x="746.0" y="52.0" width="222.0" height="82.0" rx="12" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<circle cx="772.0" cy="93" r="12" fill="#3f3cbb"/>
+<path d="M766.0,93 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="794.0" y="89.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Rollback in minutes</text>
+<text x="794.0" y="110.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">tested at least once</text>
+<text x="32.0" y="166.0" font-size="13.5" font-weight="700" fill="#0f766e" text-anchor="start" letter-spacing="1.2">RUNTIME AND DATA</text>
+<rect x="32.0" y="178.0" width="222.0" height="82.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<circle cx="58.0" cy="219" r="12" fill="#0f766e"/>
+<path d="M52.0,219 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80.0" y="215.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">HTTPS everywhere</text>
+<text x="80.0" y="236.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">with health checks</text>
+<rect x="270.0" y="178.0" width="222.0" height="82.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<circle cx="296.0" cy="219" r="12" fill="#0f766e"/>
+<path d="M290.0,219 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="318.0" y="215.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">No data on disk</text>
+<text x="318.0" y="236.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">files in object storage</text>
+<rect x="508.0" y="178.0" width="222.0" height="82.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<circle cx="534.0" cy="219" r="12" fill="#0f766e"/>
+<path d="M528.0,219 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="556.0" y="215.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Managed database</text>
+<text x="556.0" y="236.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">automatic backups</text>
+<rect x="746.0" y="178.0" width="222.0" height="82.0" rx="12" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<circle cx="772.0" cy="219" r="12" fill="#0f766e"/>
+<path d="M766.0,219 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="794.0" y="215.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">A restore tested</text>
+<text x="794.0" y="236.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">at least once</text>
+<text x="32.0" y="292.0" font-size="13.5" font-weight="700" fill="#334155" text-anchor="start" letter-spacing="1.2">SECURITY AND OPERATIONS</text>
+<rect x="32.0" y="304.0" width="222.0" height="82.0" rx="12" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<circle cx="58.0" cy="345" r="12" fill="#334155"/>
+<path d="M52.0,345 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80.0" y="341.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">No secrets in code</text>
+<text x="80.0" y="362.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">identities, not passwords</text>
+<rect x="270.0" y="304.0" width="222.0" height="82.0" rx="12" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<circle cx="296.0" cy="345" r="12" fill="#334155"/>
+<path d="M290.0,345 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="318.0" y="341.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Infrastructure in code</text>
+<text x="318.0" y="362.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">rebuilt from scratch once</text>
+<rect x="508.0" y="304.0" width="222.0" height="82.0" rx="12" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<circle cx="534.0" cy="345" r="12" fill="#334155"/>
+<path d="M528.0,345 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="556.0" y="341.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">An alert to a person</text>
+<text x="556.0" y="362.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">logs, metrics, traces</text>
+<rect x="746.0" y="304.0" width="222.0" height="82.0" rx="12" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<circle cx="772.0" cy="345" r="12" fill="#334155"/>
+<path d="M766.0,345 l4,4 l8,-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="794.0" y="341.0" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Budget alert + tags</text>
+<text x="794.0" y="362.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">on every resource</text>
+<rect x="32.0" y="410.0" width="936.0" height="96.0" rx="12" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="52.0" y="440.0" font-size="13.5" font-weight="700" fill="#6d32c9" text-anchor="start" letter-spacing="1.2">IF THE APP USES AI</text>
+<text x="52.0" y="466.0" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">Pinned model versions · timeouts and token limits · same embedding model everywhere ·</text>
+<text x="52.0" y="488.0" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">retrieval filtered by user · evaluation set in CI that blocks regressions</text>
+</svg>

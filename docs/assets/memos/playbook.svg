@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">The AI App Playbook in one picture</title>
+<desc id="d">Four layers: the architecture of the app, the eight-stage delivery loop, the two jobs of AI (inside the app and building the app), and the foundation under every stage.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="519" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<text x="32.0" y="40.0" font-size="14" font-weight="700" fill="#0f766e" text-anchor="start" letter-spacing="1.2">ARCHITECTURE</text>
+<text x="172.0" y="40.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">what the app is made of</text>
+<rect x="744.0" y="28.0" width="15.0" height="15.0" rx="3" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="765.0" y="40.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">stateless</text>
+<rect x="842.0" y="28.0" width="15.0" height="15.0" rx="3" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="863.0" y="40.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">holds data</text>
+<rect x="32.0" y="56.0" width="125.1" height="46.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="94.6" y="85.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Frontend</text>
+<rect x="167.1" y="56.0" width="125.1" height="46.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="229.7" y="85.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">API</text>
+<rect x="302.3" y="56.0" width="125.1" height="46.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="364.9" y="85.0" font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">Queue + workers</text>
+<rect x="437.4" y="56.0" width="125.1" height="46.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="500.0" y="85.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Cache</text>
+<rect x="572.6" y="56.0" width="125.1" height="46.0" rx="10" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="635.1" y="85.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Database</text>
+<rect x="707.7" y="56.0" width="125.1" height="46.0" rx="10" fill="#fdf0d5" stroke="#a15c07" stroke-width="1.5"/>
+<text x="770.3" y="85.0" font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">Object storage</text>
+<rect x="842.9" y="56.0" width="125.1" height="46.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="905.4" y="85.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">AI services</text>
+<text x="32.0" y="146.0" font-size="14" font-weight="700" fill="#3f3cbb" text-anchor="start" letter-spacing="1.2">DELIVERY LOOP</text>
+<text x="182.0" y="146.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">how every change reaches users</text>
+<rect x="744.0" y="134.0" width="15.0" height="15.0" rx="3" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="765.0" y="146.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">build it</text>
+<rect x="842.0" y="134.0" width="15.0" height="15.0" rx="3" fill="#fde4d3" stroke="#b4480e" stroke-width="1.5"/>
+<text x="863.0" y="146.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">run it</text>
+<rect x="32.0" y="162.0" width="101.2" height="46.0" rx="23" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="82.6" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">1  Plan</text>
+<line x1="135.2" y1="185.0" x2="149.2" y2="185.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="151.2" y="162.0" width="101.2" height="46.0" rx="23" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="201.9" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">2  Code</text>
+<line x1="254.5" y1="185.0" x2="268.5" y2="185.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="270.5" y="162.0" width="101.2" height="46.0" rx="23" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="321.1" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">3  Build</text>
+<line x1="373.8" y1="185.0" x2="387.8" y2="185.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="389.8" y="162.0" width="101.2" height="46.0" rx="23" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="440.4" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">4  Test</text>
+<line x1="493.0" y1="185.0" x2="507.0" y2="185.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="509.0" y="162.0" width="101.2" height="46.0" rx="23" fill="#fde4d3" stroke="#b4480e" stroke-width="1.5"/>
+<text x="559.6" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">5  Release</text>
+<line x1="612.2" y1="185.0" x2="626.2" y2="185.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="628.2" y="162.0" width="101.2" height="46.0" rx="23" fill="#fde4d3" stroke="#b4480e" stroke-width="1.5"/>
+<text x="678.9" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">6  Deploy</text>
+<line x1="731.5" y1="185.0" x2="745.5" y2="185.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="747.5" y="162.0" width="101.2" height="46.0" rx="23" fill="#fde4d3" stroke="#b4480e" stroke-width="1.5"/>
+<text x="798.1" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">7  Operate</text>
+<line x1="850.8" y1="185.0" x2="864.8" y2="185.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="866.8" y="162.0" width="101.2" height="46.0" rx="23" fill="#fde4d3" stroke="#b4480e" stroke-width="1.5"/>
+<text x="917.4" y="191.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">8  Monitor</text>
+<path d="M917.4,208 V232 H82.6 V212" fill="none" stroke="#5b6472" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<rect x="350" y="221" width="300" height="22" fill="#ffffff"/>
+<text x="500.0" y="237.0" font-size="14" font-weight="400" fill="#5b6472" text-anchor="middle">what you learn becomes the next plan</text>
+<text x="32.0" y="280.0" font-size="14" font-weight="700" fill="#6d32c9" text-anchor="start" letter-spacing="1.2">AI</text>
+<text x="72.0" y="280.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">two different jobs</text>
+<rect x="32.0" y="294.0" width="456.0" height="118.0" rx="12" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="48.0" y="318.0" font-size="15" font-weight="700" fill="#6d32c9" text-anchor="start">Inside the app</text>
+<rect x="48.0" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="95.8" y="356.0" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Question</text>
+<line x1="144.5" y1="351.0" x2="156.5" y2="351.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="157.5" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="205.2" y="356.0" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Retrieve</text>
+<line x1="254.0" y1="351.0" x2="266.0" y2="351.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="267.0" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="314.8" y="356.0" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Generate</text>
+<line x1="363.5" y1="351.0" x2="375.5" y2="351.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="376.5" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="424.2" y="356.0" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">Cited answer</text>
+<text x="48.0" y="397.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">Retrieve = embeddings + vector search · checked by evaluation</text>
+<rect x="512.0" y="294.0" width="456.0" height="118.0" rx="12" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="528.0" y="318.0" font-size="15" font-weight="700" fill="#6d32c9" text-anchor="start">Building the app</text>
+<rect x="528.0" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="575.8" y="356.0" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Spec</text>
+<line x1="624.5" y1="351.0" x2="636.5" y2="351.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="637.5" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="685.2" y="356.0" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Plan ✓</text>
+<line x1="734.0" y1="351.0" x2="746.0" y2="351.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="747.0" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="794.8" y="356.0" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Code</text>
+<line x1="843.5" y1="351.0" x2="855.5" y2="351.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="856.5" y="332.0" width="95.5" height="38.0" rx="8" fill="#ffffff" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="904.2" y="356.0" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Review ✓</text>
+<text x="528.0" y="397.0" font-size="13.5" font-weight="400" fill="#5b6472" text-anchor="start">An AI agent types · a human approves the ✓ steps</text>
+<text x="32.0" y="452.0" font-size="14" font-weight="700" fill="#334155" text-anchor="start" letter-spacing="1.2">FOUNDATION</text>
+<text x="152.0" y="452.0" font-size="15" font-weight="400" fill="#5b6472" text-anchor="start">under every stage</text>
+<rect x="32.0" y="466.0" width="225.0" height="38.0" rx="8" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<text x="144.5" y="491.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Infrastructure as code</text>
+<rect x="269.0" y="466.0" width="225.0" height="38.0" rx="8" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<text x="381.5" y="491.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Identity &amp; secrets</text>
+<rect x="506.0" y="466.0" width="225.0" height="38.0" rx="8" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<text x="618.5" y="491.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Managed data &amp; backups</text>
+<rect x="743.0" y="466.0" width="225.0" height="38.0" rx="8" fill="#e6eaf0" stroke="#334155" stroke-width="1.5"/>
+<text x="855.5" y="491.0" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Cost guardrails</text>
+</svg>

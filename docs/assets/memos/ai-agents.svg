@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Building with AI agents</title>
+<desc id="d">Two lanes. The human writes the issue and spec, approves the agent's plan, and reviews and merges. The agent proposes the plan, codes with tests on a branch, and CI checks it. An instruction file sets the rules; irreversible actions always stay with a human.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6472"/></marker></defs>
+<rect x="0.5" y="0.5" width="999" height="519" rx="16" fill="#ffffff" stroke="#d9dee5"/>
+<rect x="32.0" y="56.0" width="936.0" height="112.0" rx="12" fill="#f6f8fb" stroke="#d9dee5" stroke-width="1.5"/>
+<text x="50.0" y="104.0" font-size="14" font-weight="700" fill="#3f3cbb" text-anchor="start" letter-spacing="1.2">HUMAN</text>
+<text x="50.0" y="126.0" font-size="14" font-weight="400" fill="#5b6472" text-anchor="start">decides</text>
+<rect x="32.0" y="186.0" width="936.0" height="112.0" rx="12" fill="#f6f8fb" stroke="#d9dee5" stroke-width="1.5"/>
+<text x="50.0" y="234.0" font-size="14" font-weight="700" fill="#6d32c9" text-anchor="start" letter-spacing="1.2">AI AGENT</text>
+<text x="50.0" y="256.0" font-size="14" font-weight="400" fill="#5b6472" text-anchor="start">types</text>
+<rect x="168.0" y="70.0" width="117.3" height="84.0" rx="10" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="226.7" y="106.0" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Issue + spec</text>
+<text x="226.7" y="128.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">goal · limits · done</text>
+<rect x="301.3" y="200.0" width="117.3" height="84.0" rx="10" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="360.0" y="236.0" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Plan</text>
+<text x="360.0" y="258.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">after reading rules</text>
+<rect x="434.7" y="70.0" width="117.3" height="84.0" rx="10" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="493.3" y="106.0" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">✓ Approve</text>
+<text x="493.3" y="128.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">the plan</text>
+<rect x="568.0" y="200.0" width="117.3" height="84.0" rx="10" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="626.7" y="236.0" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Code + tests</text>
+<text x="626.7" y="258.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">on a branch</text>
+<rect x="701.3" y="200.0" width="117.3" height="84.0" rx="10" fill="#d5f5ef" stroke="#0f766e" stroke-width="1.5"/>
+<text x="760.0" y="236.0" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">CI checks</text>
+<text x="760.0" y="258.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">tests · lint · eval</text>
+<rect x="834.7" y="70.0" width="117.3" height="84.0" rx="10" fill="#e3e5fc" stroke="#3f3cbb" stroke-width="1.5"/>
+<text x="893.3" y="106.0" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">✓ Review</text>
+<text x="893.3" y="128.0" font-size="12.5" font-weight="400" fill="#5b6472" text-anchor="middle">and merge</text>
+<line x1="286.3" y1="134.0" x2="300.3" y2="220.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="419.7" y1="220.0" x2="433.7" y2="134.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="553.0" y1="134.0" x2="567.0" y2="220.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="686.3" y1="242.0" x2="700.3" y2="242.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="819.7" y1="220.0" x2="833.7" y2="134.0" stroke="#5b6472" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="32.0" y="330.0" width="936.0" height="64.0" rx="12" fill="#eee5fd" stroke="#6d32c9" stroke-width="1.5"/>
+<text x="50.0" y="357.0" font-size="15" font-weight="700" fill="#6d32c9" text-anchor="start">Every task starts from an instruction file</text>
+<text x="50.0" y="380.0" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">CLAUDE.md or AGENTS.md: project rules, how to run and test, hard limits</text>
+<rect x="32.0" y="410.0" width="936.0" height="82.0" rx="12" fill="#fde8e6" stroke="#b42318" stroke-width="1.5"/>
+<text x="50.0" y="438.0" font-size="15" font-weight="700" fill="#b42318" text-anchor="start">Always a human</text>
+<text x="50.0" y="462.0" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">production deploys · infrastructure apply and destroy · deleting data · changing access ·</text>
+<text x="50.0" y="481.0" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">anything that bills</text>
+</svg>

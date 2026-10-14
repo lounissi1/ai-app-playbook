@@ -12,6 +12,8 @@ When you work in this repository, or in an application created from it, follow t
 - One concept lives in one place. Link with `related:` instead of repeating text.
 - Never change a page's `status` to `reviewed` or `stable`. Only the maintainer does that.
 - Add every new page to `mkdocs.yml` navigation.
+- When a reference page changes in a way that affects its summary, update the matching memo in
+  `docs/memos/` too. Memos must never say anything the reference pages don't.
 
 ## When building an application from this template
 

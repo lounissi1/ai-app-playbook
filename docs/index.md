@@ -1,53 +1,116 @@
+---
+hide: [navigation, toc]
+---
+
 # AI App Playbook
 
-*Architect, build, deploy and run AI-powered apps, one clear step at a time. Works on any cloud, with real examples on Azure.*
+<p class="lead">Architect, build, deploy and run AI-powered apps, one clear step at a time. Works on any cloud, with real examples on Azure.</p>
 
-One documented, repeatable way to take an application from first design to production.
+[![The playbook in four layers: architecture, delivery loop, AI, and foundation](assets/memos/playbook.svg)](assets/memos/playbook.svg)
 
-```
- ARCHITECTURE    frontend · API · queue + workers · cache ·
-                 database · object storage · AI services
+## Start with a memo
 
- DELIVERY LOOP   Plan → Code → Build → Test → Release →
-                 Deploy → Operate → Monitor → back to Plan
+One topic, one screen, about a minute each.
 
- AI              in the app: model serving · embeddings · RAG · evaluation
-                 building the app: agents · CLAUDE.md · specs · human review
-```
+<div class="grid cards" markdown>
 
-## Start here
+-   :material-image-filter-hdr:{ .lg } **The playbook in one picture**
 
-- **New to the subject?** Read the [cheat sheet](cheatsheet.md) first.
-- **Designing an app?** Follow the [architecture guide](guides/architecture.md) and the
-  [reference architecture](cards/reference-architecture.md).
-- **Adding AI?** Read [model serving](cards/model-serving.md),
-  [embeddings and vector search](cards/embeddings-vector-search.md), [RAG](cards/rag.md) and
-  [AI evaluation](cards/ai-evaluation.md).
-- **Building with AI agents?** Follow [working with AI agents](guides/ai-agents.md).
-- **Starting an app?** Follow the [new app checklist](checklists/new-app.md).
-- **Working on one stage?** Open its guide: [Plan](guides/01-plan.md) ·
-  [Code](guides/02-code.md) · [Build](guides/03-build.md) · [Test](guides/04-test.md) ·
-  [Release](guides/05-release.md) · [Deploy](guides/06-deploy.md) ·
-  [Operate](guides/07-operate.md) · [Monitor](guides/08-monitor.md)
-- **Choosing?** See the decisions: [hosting](decisions/which-hosting.md) ·
-  [infrastructure as code](decisions/which-iac.md) · [CI/CD](decisions/which-ci.md) ·
-  [when to split a service](decisions/when-to-split.md)
-- **Going live?** Pass the [production-ready checklist](checklists/production-ready.md).
-- **Finished experimenting?** Follow the [teardown checklist](checklists/teardown.md).
+    ---
 
-## How the pages are organised
+    Architecture, delivery loop, AI and foundation in four layers.
 
-Every page is one of five types, each with a fixed structure:
+    [:octicons-arrow-right-24: Open](memos/playbook.md)
 
-| Type | Purpose |
-|---|---|
-| Cheat sheet | The whole subject on one page |
-| Guide | One stage of the loop or one foundation topic, step by step |
-| Card | One concept, with a provider mapping |
-| Decision tree | Choosing between options |
-| Checklist | A gate you pass before moving on |
+-   :material-layers-triple:{ .lg } **App architecture**
 
-Status labels: **planned**, **draft**, **reviewed** (used on a real project), **stable**.
+    ---
+
+    Seven parts, and only two of them hold data.
+
+    [:octicons-arrow-right-24: Open](memos/architecture.md)
+
+-   :material-sync:{ .lg } **The delivery loop**
+
+    ---
+
+    Eight steps every change takes, from idea to production and back.
+
+    [:octicons-arrow-right-24: Open](memos/delivery-loop.md)
+
+-   :material-server-network:{ .lg } **Where does my code run?**
+
+    ---
+
+    Four questions pick the hosting. Most apps end at the default.
+
+    [:octicons-arrow-right-24: Open](memos/hosting.md)
+
+-   :material-brain:{ .lg } **AI inside the app**
+
+    ---
+
+    Answer questions from your own documents, with sources.
+
+    [:octicons-arrow-right-24: Open](memos/ai-in-app.md)
+
+-   :material-robot-outline:{ .lg } **Building with AI agents**
+
+    ---
+
+    The agent types; you approve the plan and the merge.
+
+    [:octicons-arrow-right-24: Open](memos/ai-agents.md)
+
+-   :material-rocket-launch-outline:{ .lg } **Going live**
+
+    ---
+
+    The minimum checks before real users depend on the app.
+
+    [:octicons-arrow-right-24: Open](memos/going-live.md)
+
+-   :material-cash-multiple:{ .lg } **Cost guardrails**
+
+    ---
+
+    What bills, what's easy to miss, and six brakes.
+
+    [:octicons-arrow-right-24: Open](memos/cost.md)
+
+</div>
+
+## Go deeper when you build
+
+The reference pages hold every detail, step and provider name. They are also what AI coding agents follow.
+
+<div class="grid cards" markdown>
+
+-   :material-file-document-outline:{ .lg } **[Cheat sheet](cheatsheet.md)**
+
+    The whole subject on one page, in text.
+
+-   :material-stairs:{ .lg } **[Guides](guides/01-plan.md)**
+
+    Each stage of the loop, step by step, plus [architecture](guides/architecture.md), [security](guides/security.md), [infrastructure](guides/infrastructure.md), [cost](guides/cost.md) and [AI agents](guides/ai-agents.md).
+
+-   :material-card-text-outline:{ .lg } **[Cards](cards/index.md)**
+
+    One concept per page, mapped to Azure, AWS, Google Cloud and open source.
+
+-   :material-source-branch:{ .lg } **Decisions**
+
+    [Which hosting?](decisions/which-hosting.md) · [Which infrastructure as code?](decisions/which-iac.md) · [Which CI/CD?](decisions/which-ci.md) · [When to split a service?](decisions/when-to-split.md)
+
+-   :material-check-decagram-outline:{ .lg } **Checklists**
+
+    [New app](checklists/new-app.md) · [Production ready](checklists/production-ready.md) · [Teardown](checklists/teardown.md)
+
+-   :material-robot-outline:{ .lg } **[Working with AI agents](guides/ai-agents.md)**
+
+    Specs, plans and reviews, so agents type and humans decide.
+
+</div>
 
 ---
 

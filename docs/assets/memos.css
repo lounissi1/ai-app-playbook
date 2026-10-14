@@ -1,0 +1,36 @@
+/* Visual memos: pictures first, short text, generous spacing. */
+
+.md-typeset .lead {
+  font-size: 1.05rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: -0.4rem;
+}
+
+.md-typeset img.memo-figure,
+.md-typeset img[src*="assets/memos/"] {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.8rem auto 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Remember lists read as a short stack of key points. */
+.md-typeset h2#remember + ul > li {
+  margin-bottom: 0.5em;
+}
+
+/* Card grids on the home page and memo index. */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 12px;
+}
+
+.md-typeset .grid.cards .lg {
+  vertical-align: -0.2em;
+}
+
+.md-typeset .coming-next {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+}
